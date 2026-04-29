@@ -1,22 +1,23 @@
 import sys
+from importlib import metadata
 
-def get_version(pkg):
+
+def get_version(distribution_name):
     try:
-        module = __import__(pkg)
-        return module.__version__
-    except Exception:
+        return metadata.version(distribution_name)
+    except metadata.PackageNotFoundError:
         return "Not Installed"
 
 packages = [
-"streamlit" ,
-"tensorflow" ,
-"numpy" ,
-"pandas" ,
-"scikit-learn" ,
-"matplotlib" ,
-"librosa" ,
-"soundfile" ,
-"huggingface-hub" 
+    "streamlit",
+    "tensorflow",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "librosa",
+    "soundfile",
+    "huggingface-hub",
 ]
 
 print("\n📦 Installed Package Versions\n")
