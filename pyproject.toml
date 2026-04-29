@@ -4,4 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "huggingface-hub>=1.12.0",
+    "librosa==0.11.0",
+    "matplotlib==3.10.8",
+    "numpy==2.2.6",
+    "pandas==2.3.3",
+    "soundfile==0.13.1",
+    "streamlit>=1.57.0",
+    "tensorflow==2.20.0",
+]
